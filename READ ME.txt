@@ -8,10 +8,10 @@ admin-user-librarian.css
 admin-user-librarian.js
 
 Librarian file:
-(Libarian)Userpage.html
-(libraian)Book Report.html
-(librarian)Add Book.html
-(librarian)Add student.html
+librarian/userpage.html
+librarian/add-book.html
+librarian/add-book.html
+librarian/add-student.html
 admin-user-librarian.css
 admin-user-librarian.js
 
