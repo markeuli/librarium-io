@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/admin-user-librarian.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/admin-user-librarian.css" />
   </head>
 
   <body>
@@ -14,8 +17,11 @@
       <div class="logo-name">Libary</div>
         </a>
           <ul class="side-menu">
-            <li class="active"><a href="(user)Userpage.html"></i>User</a></li>
-            <li><a href="(user)Book Report.html"></i>Book Report </a></li>
+            <li ><a href="(Libarian)Userpage.html"></i>User</a></li>
+            <li class="active"><a href="(libraian)Book Report.html"></i>Book Report </a></li>
+            <li><a href="(librarian)Add student.html"></i>Add student </a></li>
+            <li><a href="(librarian)Add Book.html"></i>Add Book</a></li>
+            <li><a href="(librarian)order.html"></i>Order</a></li>
           </ul>
           <ul class="side-menu">
             <li>
@@ -29,9 +35,9 @@
       </nav>
     <!-- End of Sidebar -->
     
-   
-     <!-- Navbar -->
+
     <div class="content">
+      <!-- Navbar -->
       <nav>
         <i class="bx bx-menu"></i>
         <form action="#">
@@ -48,28 +54,18 @@
         </a>
       </nav>
 
-
       <!-- End of Navbar -->
-       <!-- Main Content -->
-    <main>
-      <div class="user-container">
-          <h1>User Profile</h1>
-          <div class="user-details">
-              <div class="avatar">
-                  <img src="CSS/image.png" alt="Profile Picture">
-              </div>
-              <div class="info">
-                <!-- Your existing content -->
-                <p><strong>Name:</strong> John Doe <button class="update-button">Update</button></p>
-                <p><strong>Email:</strong> johndoe@example.com <button class="update-button">Update</button></p>
-                <p><strong>Date of birth</strong> January 1, 2020 <button class="update-button">Update</button></p>
-                <p><strong>Location:</strong> City, Country <button class="update-button">Update</button></p>
-                <p><strong>Member Since:</strong> January 1, 2020</p>
-                <p><strong>Username:</strong> johndoe123</p>
-                <!-- Add more details as needed -->
-              </div>
+
+      <main>
+        
+        <div class="header">
+          <div class="left">
+            <h1>Book reprot </h1>
+            <ul class="breadcrumb">
+            </ul>
           </div>
-      </div>
+        </div>
+
         <div class="bottom-data">
           <div class="orders">
             <div class="header">
@@ -90,19 +86,25 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>John Doe</td>
+                  <td>
+                    <p>John Doe</p>
+                  </td>
                   <td>14-08-2023</td>
                   <td>15-09-2023</td>
                   <td><span class="status completed">Returned</span></td>
                 </tr>
                 <tr>
-                  <td>John Doe</td>
+                  <td>
+                    <p>John Doe</p>
+                  </td>
                   <td>14-08-2023</td>
                   <td></td>
                   <td><span class="status Reverse">Reserve</span></td>
                 </tr>
                 <tr>
-                  <td>John Doe</td>
+                  <td>
+                    <p>John Doe</p>
+                  </td>
                   <td>14-08-2023</td>
                   <td></td>
                   <td><span class="status Borrow">Borrow</span></td>
@@ -110,10 +112,8 @@
               </tbody>
             </table>
           </div>
-        </div>      
-    </main>
-      <!-- End Main-->
-    </div>
+        </div>
+      </main>    </div>
     <script src="admin-user-librarian.js"></script>
   </body>
 </html>
