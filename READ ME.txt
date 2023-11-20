@@ -1,0 +1,30 @@
+Admin file:
+-Index2.html
+-Add book.html
+-Add librarian.html
+-Add student.html
+-Book report.html
+admin-user-librarian.css
+admin-user-librarian.js
+
+Librarian file:
+(Libarian)Userpage.html
+(libraian)Book Report.html
+(librarian)Add Book.html
+(librarian)Add student.html
+admin-user-librarian.css
+admin-user-librarian.js
+
+
+user:
+(user)Book Report.html
+(user)Userpage.html
+admin-user-librarian.css
+admin-user-librarian.js
+
+home page:
+index.html
+login.html
+resigterpage.html
+login and resig.css
+index.css
