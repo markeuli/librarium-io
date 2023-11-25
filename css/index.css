@@ -8,7 +8,7 @@ body {
   background-color: #f4f4f4;
   color: #faf9f9;
   line-height: 1;
-  background-image: url("/images/img.jpg"); /* Apply the background image to the entire body */
+  background-image: url("/librarium-io/images/img.jpg"); /* Apply the background image to the entire body */
   background-size: cover;
   background-position: center;
 }
