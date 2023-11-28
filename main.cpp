@@ -11,6 +11,8 @@ class Book
     // need a class book.
 };
 
+
+// Class representing an Order
 class Order
 {
 private:
@@ -88,6 +90,8 @@ public:
 };
 
 //---------------------------------------------------------------------------------------------------------------
+// Class managing a collection of orders
+
 class ManageOrder
 {
 private:
@@ -124,6 +128,7 @@ public:
             }
         }
     }
+        // Getter method to retrieve the list of orders
     const vector<Order> &getOrders() const
     {
         return orders;
