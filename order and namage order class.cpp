@@ -5,86 +5,70 @@
 #include <algorithm>
 
 using namespace std;
+class Date {
 
-class Book
-{
-    // need a class book.
 };
 
+class Book {
 
+};
 // Class representing an Order
-class Order
-{
+class Order {
 private:
     int orderId;
-    string dateCreated;
+    Date dateCreated;
     int userId;
     vector<Book> booksOrdered;
     string status;
-    string dueDate;
-    string returnDate; // because we dont have a class for date so i just replace it using "string"
+    Date dueDate;
+    Date returnDate;
 
 public:
     Order() : booksOrdered({}) {}
 
     // Getter methods
-    int getOrderId() const
-    {
+    int getOrderId() const {
         return orderId;
     }
-    string getDateCreated() const
-    {
+    Date getDateCreated() const {
         return dateCreated;
     }
-    int getUserId() const
-    {
+    int getUserId() const {
         return userId;
     }
-    const vector<Book> &getBooksOrdered() const
-    {
+    const vector<Book> &getBooksOrdered() const {
         return booksOrdered;
     }
-    string getStatus() const
-    {
+    string getStatus() const {
         return status;
     }
-    string getDueDate() const
-    {
+    Date getDueDate() const {
         return dueDate;
     }
-    string getReturnDate() const
-    {
+    Date getReturnDate() const {
         return returnDate;
     }
 
     // Setter methods
-    void setOrderId(int id)
-    {
+    void setOrderId(int id) {
         orderId = id;
     }
-    void setDateCreated(const string &d)
-    {
+    void setDateCreated(const Date &d) {
         dateCreated = d;
     }
-    void setUserId(int id)
-    {
+    void setUserId(int id) {
         userId = id;
     }
-    void setBooksOrdered(const vector<Book> &books)
-
-    {
+    void setBooksOrdered(const vector<Book> &books) {
         booksOrdered = books;
     }
-    void setStatus(const string &s)
-    {
+    void setStatus(const string &s) {
         status = s;
     }
-    void setDueDate(const string &d)
-    {
+    void setDueDate(const Date &d) {
         dueDate = d;
     }
-    void setReturnDate(const string &d)
-    {
+    void setReturnDate(const Date &d) {
         returnDate = d;
     }
 };
