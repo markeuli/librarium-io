@@ -3,6 +3,10 @@
 #include <string>
 #include <list>
 
+#include "Book.h"
+
+using namespace std;
+
 class Member{
 	private:
     	int memberID;
