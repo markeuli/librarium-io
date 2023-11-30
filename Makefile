@@ -11,14 +11,14 @@ all: $(TARGET)
 
 # Linking
 $(TARGET): $(OBJ)
-    $(CXX) $^ -o $@
+	$(CXX) $^ -o $@
 
 # Compilation
 %.o: %.cpp
-    $(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 # Clean up
 clean:
-    rm -f $(OBJ) $(TARGET)
+	rm -f $(OBJ) $(TARGET)
 
 .PHONY: all clean
