@@ -72,7 +72,7 @@ class Member{
 
         //remove a book from checked out list
         void checkOutBook(Book book){
-            if(book.getCopiesAvailable > 0){
+            if(book.getCopiesAvailable.size() > 0){
                 Order.generate();
                 book.updateStatus();
                 setCheckedoutBooks(book);
