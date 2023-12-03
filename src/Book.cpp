@@ -4,7 +4,7 @@ Book::Book() {
     title = "";
     author = "";
     isbn = "";
-    publicationDate = Date();
+    publicationDate = 2000;
     copiesAvailable = 0;
     totalCopies = 0;
     language = "";
@@ -52,11 +52,11 @@ void Book::setISBN(const std::string& isbn) {
     this->isbn = isbn;
 }
 
-Date Book::getPublicationDate() const {
+int Book::getPublicationDate() const {
     return publicationDate;
 }
 
-void Book::setPublicationDate(const Date& d) {
+void Book::setPublicationDate(const int& d) {
     publicationDate = d;
 }
 

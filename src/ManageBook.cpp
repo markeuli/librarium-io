@@ -14,7 +14,7 @@ void ManageBook::addBook()
     Book b;
     std::string title, author, isbn, lang, cond, status;
     int tc, id;
-    Date d;
+    int d;
     std::cout << "Enter book ID:\n";
     std::cin >> id;
     b.setBookId(id);
@@ -135,7 +135,7 @@ void ManageBook::viewBook(int bookID)
             std::cout << "Title: " << b.getTitle() << std::endl;
             std::cout << "Author: " << b.getAuthor() << std::endl;
             std::cout << "ISBN: " << b.getISBN() << std::endl;
-            std::cout << "Publication Date: " << b.getPublicationDate().getDay() << "/" << b.getPublicationDate().getMonth() << "/" << b.getPublicationDate().getYear() << std::endl;
+            std::cout << "Publication Date: " << b.getPublicationDate() << std::endl;
             std::cout << "Copies Available: " << b.getCopiesAvailable() << std::endl;
             std::cout << "Total Copies: " << b.getTotalCopies() << std::endl;
             std::cout << "Language: " << b.getLanguage() << std::endl;
@@ -153,7 +153,7 @@ void ManageBook::viewAllBooks(){
         std::cout << "Title: " << b.getTitle() << std::endl;
         std::cout << "Author: " << b.getAuthor() << std::endl;
         std::cout << "ISBN: " << b.getISBN() << std::endl;
-        std::cout << "Publication Date: " << b.getPublicationDate().getDay() << "/" << b.getPublicationDate().getMonth() << "/" << b.getPublicationDate().getYear() << std::endl;
+        std::cout << "Publication Date: " << b.getPublicationDate() << std::endl;
         std::cout << "Copies Available: " << b.getCopiesAvailable() << std::endl;
         std::cout << "Total Copies: " << b.getTotalCopies() << std::endl;
         std::cout << "Language: " << b.getLanguage() << std::endl;

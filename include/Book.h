@@ -9,7 +9,7 @@ private:
     std::string title;
     std::string author;
     std::string isbn;
-    Date publicationDate;
+    int publicationDate;
     int copiesAvailable;
     int totalCopies;
     std::string language;
@@ -32,8 +32,8 @@ public:
     std::string getISBN() const;
     void setISBN(const std::string& isbn);
 
-    Date getPublicationDate() const;
-    void setPublicationDate(const Date& d);
+    int getPublicationDate() const;
+    void setPublicationDate(const int& d);
 
     int getCopiesAvailable() const;
     void setCopiesAvailable(int c);
