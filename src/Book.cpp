@@ -1,6 +1,7 @@
 #include "Book.h"
 
-Book::Book() {}
+Book::Book() : copiesAvailable(0), totalCopies(0) {}
+
 
 std::string Book::getTitle() const {
     return title;
@@ -80,5 +81,12 @@ std::string Book::getBookStatus() const {
 
 void Book::setBookStatus(const std::string& s) {
     bookStatus = s;
+}
+void Book::checkoutBook() {
+    if (copiesAvailable > 0) {
+        copiesAvailable--;
+} else {
+        std::cout << "No copies available for checkout." << std::endl;
+    }
 }
 
