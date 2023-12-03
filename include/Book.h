@@ -1,3 +1,6 @@
+#ifndef BOOK_H
+#define BOOK_H
+
 #include <string>
 #include "Date.h"
 
@@ -16,6 +19,9 @@ private:
 
 public:
     Book();
+    Book(int id, const std::string& title, const std::string& author, const std::string& isbn, 
+        int tc, const std::string& lang = "Unknown", const std::string& cond = "Fair", 
+        const std::string& status="Available");
 
     std::string getTitle() const;
     void setTitle(const std::string& t);
@@ -47,3 +53,5 @@ public:
     std::string getBookStatus() const;
     void setBookStatus(const std::string& s);
 };
+
+#endif

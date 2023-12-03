@@ -1,63 +1,49 @@
-#include <string>
-#include <iostream>
+#include "Librarian.h"
 
-class Librarian {
-private:
-    std::string name;
-    int employeeId;
-    std::string email;
-    std::string password;
-    std::string shiftScheduled; // Assuming the date is stored as a string for simplicity
+Librarian::Librarian(std::string name, int employeeId, std::string email, std::string password, std::string shiftScheduled)
+    : name(name), employeeId(employeeId), email(email), password(password), shiftScheduled(shiftScheduled) {}
 
-public:
-    // Constructor
-    Librarian(std::string name, int employeeId, std::string email, std::string password, std::string shiftScheduled)
-        : name(name), employeeId(employeeId), email(email), password(password), shiftScheduled(shiftScheduled) {}
+std::string Librarian::getName() const {
+    return name;
+}
 
-    // Getters
-    std::string getName() const {
-        return name;
-    }
+int Librarian::getEmployeeId() const {
+    return employeeId;
+}
 
-    int getEmployeeId() const {
-        return employeeId;
-    }
+std::string Librarian::getEmail() const {
+    return email;
+}
 
-    std::string getEmail() const {
-        return email;
-    }
+std::string Librarian::getPassword() const {
+    return password;
+}
 
-    std::string getPassword() const {
-        return password;
-    }
+std::string Librarian::getShiftScheduled() const {
+    return shiftScheduled;
+}
 
-    std::string getShiftScheduled() const {
-        return shiftScheduled;
-    }
+void Librarian::setName(const std::string& n) {
+    name = n;
+}
 
-    // Setters
-    void setName(const std::string& n) {
-        name = n;
-    }
+void Librarian::setEmployeeId(int id) {
+    employeeId = id;
+}
 
-    void setEmployeeId(int id) {
-        employeeId = id;
-    }
+void Librarian::setEmail(const std::string& e) {
+    email = e;
+}
 
-    void setEmail(const std::string& e) {
-        email = e;
-    }
+void Librarian::setPassword(const std::string& p) {
+    password = p;
+}
 
-    void setPassword(const std::string& p) {
-        password = p;
-    }
+void Librarian::setShiftScheduled(const std::string& s) {
+    shiftScheduled = s;
+}
 
-    void setShiftScheduled(const std::string& s) {
-        shiftScheduled = s;
-    }
-};
-
-int main() {
+/*int main() {
     // Example usage
     Librarian librarian("John Doe", 123, "johndoe@example.com", "password123", "2023-11-28");
 
@@ -69,4 +55,4 @@ int main() {
     std::cout << "Updated Email: " << librarian.getEmail() << std::endl;
 
     return 0;
-}
+}*/

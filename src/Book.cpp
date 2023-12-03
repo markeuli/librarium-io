@@ -1,6 +1,32 @@
 #include "Book.h"
 
-Book::Book() {}
+Book::Book() {
+    title = "";
+    author = "";
+    isbn = "";
+    publicationDate = Date();
+    copiesAvailable = 0;
+    totalCopies = 0;
+    language = "";
+    condition = "";
+    bookId = 0;
+    bookStatus = "";
+}
+
+Book::Book(int id, const std::string& title, const std::string& author, const std::string& isbn, 
+        int tc, const std::string& lang, const std::string& cond, 
+        const std::string& status){
+    this->title = title;
+    this->author = author;
+    this->isbn = isbn;
+    this->totalCopies = tc;
+    this->copiesAvailable = tc;
+    this->language = lang;
+    this->condition = cond;
+    this->bookId = id;
+    this->bookStatus = status;
+
+}
 
 std::string Book::getTitle() const {
     return title;

@@ -19,7 +19,19 @@ void Menu::showLoginMenu() {
     cin >> username;
     cout << "Password(123 for all): ";
     cin >> password;
-
+    if (username == "admin" && password == "123") {
+        userType = "admin";
+        showAdminMenu();
+    } else if (username == "librarian" && password == "123") {
+        userType = "librarian";
+        showLibrarianMenu();
+    } else if (username == "user" && password == "123") {
+        userType = "user";
+        showUserMenu();
+    } else {
+        cout << "Invalid credentials" << endl;
+        showLoginMenu();
+    }
 }
 
 void Menu::showAdminMenu() {

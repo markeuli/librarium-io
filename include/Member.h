@@ -8,81 +8,29 @@
 using namespace std;
 
 class Member{
-	private:
-    	int memberID;
+    
+    private:
+        int memberId;
         std::string name;
         std::string email;
         std::string password;
         std::string membershipStatus;
-        std::list<Book> checkedOutBooks;
-        
-	public:
-        //Setter methods
-        void setMemberID(int ID){
-        	memberID = ID;
-        }
-        
-        void setName(std::string n){
-        	name = n;
-        }
-        
-        void setEmail(std::string e){
-        	email = e;
-        }
-        
-        void setPassword(std::string p){
-        	password = p;
-        }
-        
-        void setMembershipStatus(std::string status){
-        	membershipStatus = status;
-        }
-        
-        //Getter methods
-        int getMemberID(){
-        	return memberID;
-        }
-        
-        std::string getName(){
-        	return name;
-        }
-        
-        std::string getEmail(){
-        	return email;
-        }
-        
-        std::string getPassword(){
-        	return password;
-        }
-        
-        std::string getMembershipStatus(){
-        	return membershipStatus;
-        }
-        
-        //Members book list methods
+        std::vector<Book> booksBorrowed;
+    
+    public:
+        Member();
+        std::string getName() const;
+        std::string getEmail() const;
+        std::string getPassword() const;
+        std::string getMembershipStatus() const;
+        void setName(std::string name);
+        void setEmail(std::string email);
+        void setPassword(std::string password);
+        void setMembershipStatus(std::string membershipStatus);
+        int getMemberID() const;
+        void setMemberID(int id);
+        void checkOutBook(int bookID);
+        void returnBook(int bookID);
+        std::vector<Book> viewBorrowedBooks() const;
 
-        //Return list of checked out books
-        void getCheckedOutBooks(){
-            
-        }
-        //Add a book to checked out list
-        void setCheckedOutBooks(std::list<Book> book){
-            checkedOutBooks.push_back(book);
-        }
-
-        //remove a book from checked out list
-        void checkOutBook(Book book){
-            if(book.getCopiesAvailable.size() > 0){
-                Order.generate();
-                book.updateStatus();
-                setCheckedoutBooks(book);
-            }else{
-                cout << "Book is unavailable to checkout.";
-            }
-        }
-
-        void returnBook(Book book){
-            checkedOutBooks.remove(book);
-            book.updateStatus();
-        }
 };

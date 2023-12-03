@@ -2,14 +2,16 @@
 #include <chrono>
 #include <ctime>
 #include <string>
+#include <iostream>
 
 Date::Date() {
     updateCurrentDate();
 }
 
 void Date::updateCurrentDate() {
-    auto now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-    localtime_s(&dateInfo, &now);
+    time_t ttime = time(0);             // get time now
+    tm *local_time = localtime(&ttime); // convert to local time
+    dateInfo = *local_time;             //set dateInfo to local time
 }
 
 int Date::getYear() const {
