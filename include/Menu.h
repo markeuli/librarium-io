@@ -21,6 +21,7 @@ private:
     ManageMember manageMember;
     ManageOrder manageOrder;
     ManageBook manageBook;
+    int userId;
     //ManageAdmin manageAdmin; TODO: Implement this class
     
 public:
@@ -35,5 +36,5 @@ public:
     void showManageUsersMenu();
     void showManageBooksMenu();
     void showManageOrdersMenu();
-    
+
 };

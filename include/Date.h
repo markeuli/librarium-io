@@ -8,9 +8,14 @@
 class Date {
 private:
     std::tm dateInfo;
+    int day;
+    int month;
+    int year;
 
 public:
     Date();
+
+    Date(int day, int month, int year);
 
     void updateCurrentDate();
 

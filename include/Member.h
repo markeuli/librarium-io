@@ -1,3 +1,6 @@
+#ifndef MEMBER_H
+#define MEMBER_H
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -15,7 +18,6 @@ class Member{
         std::string email;
         std::string password;
         std::string membershipStatus;
-        std::vector<Book> booksBorrowed;
     
     public:
         Member();
@@ -31,7 +33,6 @@ class Member{
         void setMembershipStatus(std::string membershipStatus);
         int getMemberID() const;
         void setMemberID(int id);
-        std::vector<Book> viewBorrowedBooks() const;
 };
 
 class ManageMember{
@@ -40,10 +41,11 @@ class ManageMember{
 
     public:
         void addMember();
+        void addMember(const Member& memb);
         void removeMember(int memberID);
         void editMember(int id);
         void viewMember(int id);
         void viewAllMembers();
-        void checkOutBook(int memberID, int bookID);
-        void returnBook(int memberID, int bookID);
 };
+
+#endif

@@ -3,11 +3,12 @@
 #include <vector>
 #include <iostream>
 
-ManageBook::ManageBook()
+//commented in case we want to add hardcoded books for demo
+/*ManageBook::ManageBook()
 {
     //if we had a db: books = readBooksFromFile();
     books = std::vector<Book>();
-}
+}*/
 
 void ManageBook::addBook()
 {
@@ -160,4 +161,44 @@ void ManageBook::viewAllBooks(){
         std::cout << "Condition: " << b.getCondition() << std::endl;
         std::cout << "Book Status: " << b.getBookStatus() << std::endl << std::endl;
     }
+}
+
+bool ManageBook::checkOutBook(int bookId)
+{
+    //returns true if book was checked out successfully
+    //returns false if book not found or no copies available
+    for (auto &b : books)
+    {
+        if (b.getBookId() == bookId)
+        {
+            if (b.getCopiesAvailable() > 0)
+            {
+                b.setCopiesAvailable(b.getCopiesAvailable() - 1);
+                return true;
+            }
+            else
+            {
+                std::cout << "No copies available\n";
+                return false;
+            }
+        }
+    }
+    std::cout << "Book not found\n";
+    return false;
+}
+
+bool ManageBook::returnBook(int bookId)
+{
+    //returns true if book was returned successfully
+    //returns false if book not found
+    for (auto &b : books)
+    {
+        if (b.getBookId() == bookId)
+        {
+            b.setCopiesAvailable(b.getCopiesAvailable() + 1);
+            return true;
+        }
+    }
+    std::cout << "Book not found\n";
+    return false;
 }

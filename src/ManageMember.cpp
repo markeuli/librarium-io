@@ -34,6 +34,11 @@ void ManageMember::addMember(){
     members.push_back(memb);
 }
 
+//preconfigured member
+void ManageMember::addMember(const Member& memb){
+    members.push_back(memb);
+}
+
 void ManageMember::removeMember(int memberID){
     for (auto& member : members) {
         if (member.getMemberID() == memberID) {
@@ -49,7 +54,50 @@ void ManageMember::removeMember(int memberID){
 void ManageMember::editMember(int id){
     for (auto& member : members) {
         if (member.getMemberID() == id) {
+            cout << "Which field would you like to change?\n";
+            cout << "1. Name\n";
+            cout << "2. Email\n";
+            cout << "3. Password\n";
+            cout << "4. Membership Status\n";
+            cout << "5. None\n";
+            cout << "Enter your choice: ";
+            int choice;
+            cin >> choice;
+            string newInfo;
+            switch (choice)
+            {
+            case 1:
+                cout << "Enter new name:\n";
+                cin >> newInfo;
+                member.setName(newInfo);
+                return;
+                break;
             
+            case 2:
+                cout << "Enter new email:\n";
+                cin >> newInfo;
+                member.setEmail(newInfo);
+                return;
+                break;
+            
+            case 3:
+                cout << "Enter new password:\n";
+                cin >> newInfo;
+                member.setPassword(newInfo);
+                return;
+                break;
+            
+            case 4:
+                cout << "Enter new membership status:\n";
+                cin >> newInfo;
+                member.setMembershipStatus(newInfo);
+                return;
+                break;
+            
+            case 5:
+                return;
+                break;
+            }
         }
     }
 }
@@ -76,12 +124,3 @@ void ManageMember::viewAllMembers(){
     }
 }
 
-//belongs in control class
-void ManageMember::checkOutBook(int bookID, int memberID){
-    //TODO: Figure out how we handle books
-}
-
-//belongs in control class
-void ManageMember::returnBook(int bookID, int memberID){
-    //TODO: Figure out how we handle books
-}

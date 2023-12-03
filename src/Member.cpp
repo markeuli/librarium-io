@@ -11,7 +11,6 @@ Member::Member() {
     email = "";
     password = "";
     membershipStatus = "";
-    booksBorrowed = {};
 }
 
 //copy constructor
@@ -21,7 +20,6 @@ Member::Member(const Member& memb){
     email = memb.email;
     password = memb.password;
     membershipStatus = memb.membershipStatus;
-    booksBorrowed = memb.booksBorrowed;
 }
 
 void Member::setMemberID(int ID) {
@@ -64,9 +62,6 @@ std::string Member::getMembershipStatus() const{
     return membershipStatus;
 }
 
-//Return list of checked out books
-std::vector<Book> Member::viewBorrowedBooks() const{
-    return booksBorrowed;
-}
+
 
 

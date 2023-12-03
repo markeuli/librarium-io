@@ -13,7 +13,5 @@ using namespace std;
 int main()
 {
     Menu menu;
-    menu.showLoginMenu();
-    
     return 0;
 }

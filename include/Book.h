@@ -2,6 +2,7 @@
 #define BOOK_H
 
 #include <string>
+#include <vector>
 #include "Date.h"
 
 class Book {
@@ -65,6 +66,8 @@ class ManageBook
         const std::vector<Book> getBooks() const;
         void viewBook(int id);
         void viewAllBooks();
+        bool checkOutBook(int bookId);
+        bool returnBook(int bookId);
 };
 
 #endif
