@@ -17,6 +17,8 @@ class Member{
         std::list<Book> checkedOutBooks;
         
 	public:
+        //Constructor
+        Member(int id, std::string n, std::string e, std::string p, std::string status){}
         //Setter methods
         void setMemberID(int ID){
         	memberID = ID;
@@ -59,6 +61,7 @@ class Member{
         	return membershipStatus;
         }
         
+        /*
         //Members book list methods
 
         //Return list of checked out books
@@ -84,5 +87,5 @@ class Member{
         void returnBook(Book book){
             checkedOutBooks.remove(book);
             book.updateStatus();
-        }
+        }*/
 };
