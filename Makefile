@@ -19,6 +19,9 @@ $(TARGET): $(OBJ)
 
 # Clean up
 clean:
-	rm -f $(OBJ) $(TARGET)
+	@echo "Deleting object files: $(OBJ)"
+	rm -f $(OBJ)
+	@echo "Deleting target file: $(TARGET)"
+	rm -f $(TARGET)
 
 .PHONY: all clean
