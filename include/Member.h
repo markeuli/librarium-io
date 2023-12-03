@@ -19,6 +19,8 @@ class Member{
     
     public:
         Member();
+        //copy constructor
+        Member(const Member& memb);
         std::string getName() const;
         std::string getEmail() const;
         std::string getPassword() const;
@@ -29,8 +31,19 @@ class Member{
         void setMembershipStatus(std::string membershipStatus);
         int getMemberID() const;
         void setMemberID(int id);
-        void checkOutBook(int bookID);
-        void returnBook(int bookID);
         std::vector<Book> viewBorrowedBooks() const;
+};
 
+class ManageMember{
+    private:
+        std::vector<Member> members;
+
+    public:
+        void addMember();
+        void removeMember(int memberID);
+        void editMember(int id);
+        void viewMember(int id);
+        void viewAllMembers();
+        void checkOutBook(int memberID, int bookID);
+        void returnBook(int memberID, int bookID);
 };

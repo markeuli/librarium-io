@@ -14,6 +14,16 @@ Member::Member() {
     booksBorrowed = {};
 }
 
+//copy constructor
+Member::Member(const Member& memb){
+    memberId = memb.memberId;
+    name = memb.name;
+    email = memb.email;
+    password = memb.password;
+    membershipStatus = memb.membershipStatus;
+    booksBorrowed = memb.booksBorrowed;
+}
+
 void Member::setMemberID(int ID) {
     memberId = ID;
 }
@@ -59,12 +69,4 @@ std::vector<Book> Member::viewBorrowedBooks() const{
     return booksBorrowed;
 }
 
-//belongs in control class
-void Member::checkOutBook(int bookID){
-    //TODO: Figure out how we handle books
-}
 
-//belongs in control class
-void Member::returnBook(int bookID){
-    //TODO: Figure out how we handle books
-}

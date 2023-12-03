@@ -4,45 +4,38 @@
 
 using namespace std;
 
-class ManageOrder
+
+void ManageOrder::addOrder(const Order &order)
 {
-private:
-    vector<Order> orders;
+    orders.push_back(order);
+}
 
-public:
-    // Add a new order to the list
-    void addOrder(const Order &order)
-    {
-        orders.push_back(order);
-    }
+// Remove an order based on its ID
+void ManageOrder::removeOrder(int orderId)
+{
+    orders.erase(
+        remove_if(orders.begin(), orders.end(),
+                    [orderId](const Order &o)
+                    {
+                        return o.getOrderId() == orderId;
+                    }),
+        orders.end());
+}
 
-    // Remove an order based on its ID
-    void removeOrder(int orderId)
+// Edit an existing order based on its ID
+void ManageOrder::editOrder(const Order &updatedOrder)
+{
+    for (auto &o : orders)
     {
-        orders.erase(
-            remove_if(orders.begin(), orders.end(),
-                      [orderId](const Order &o)
-                      {
-                          return o.getOrderId() == orderId;
-                      }),
-            orders.end());
-    }
-
-    // Edit an existing order based on its ID
-    void editOrder(const Order &updatedOrder)
-    {
-        for (auto &o : orders)
+        if (o.getOrderId() == updatedOrder.getOrderId())
         {
-            if (o.getOrderId() == updatedOrder.getOrderId())
-            {
-                o = updatedOrder;
-                return;
-            }
+            o = updatedOrder;
+            return;
         }
     }
-    // Getter method to retrieve the list of orders
-    const vector<Order> &getOrders() const
-    {
-        return orders;
-    }
-};
+}
+
+const vector<Order> ManageOrder::getOrders() const
+{
+    return orders;
+}

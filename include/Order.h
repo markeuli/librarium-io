@@ -37,4 +37,16 @@ public:
     void setReturnDate(const Date &d);
 };
 
+class ManageOrder
+{
+private:
+    std::vector<Order> orders;
+
+public:
+    void addOrder(const Order &order);
+    void removeOrder(int orderId);
+    void editOrder(const Order &updatedOrder);
+    const std::vector<Order> getOrders() const;
+};
+
 #endif

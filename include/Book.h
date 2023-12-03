@@ -54,4 +54,17 @@ public:
     void setBookStatus(const std::string& s);
 };
 
+class ManageBook
+{
+    private:
+        std::vector<Book> books;
+    public:
+        void addBook();
+        void removeBook(int bookId);
+        void editBook(int bookID);
+        const std::vector<Book> getBooks() const;
+        void viewBook(int id);
+        void viewAllBooks();
+};
+
 #endif
