@@ -41,7 +41,6 @@ void Menu::showLoginMenu() {
             showUserMenu();
         } else {
             cout << "Invalid credentials" << endl;
-            showLoginMenu();
         }
     }
 }
@@ -72,7 +71,6 @@ void Menu::showAdminMenu() {
                 break;
             default:
                 cout << "Invalid choice" << endl;
-                showAdminMenu();
                 break;
         }
     }
@@ -133,7 +131,6 @@ void Menu::showUserMenu() {
                 break;
             default:
                 cout << "Invalid choice" << endl;
-                showUserMenu();
                 break;
         } 
     }
@@ -182,7 +179,6 @@ void Menu::showLibrarianMenu() {
                 break;
             default:
                 cout << "Invalid choice" << endl;
-                showLibrarianMenu();
                 break;
         }
     }
@@ -223,7 +219,6 @@ void Menu::showManageUsersMenu() {
                 break;
             default:
                 cout << "Invalid choice" << endl;
-                showManageUsersMenu();
                 break;
         }
     }
@@ -262,7 +257,6 @@ void Menu::showManageBooksMenu(){
                 break;
             default:
                 cout << "Invalid choice" << endl;
-                showManageBooksMenu();
                 break;
         }
     }
