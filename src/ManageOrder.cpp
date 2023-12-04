@@ -58,6 +58,7 @@ bool ManageOrder::orderBook(int userId, int bookId, const Date &dueDate) {
     order.setOrderId(orders.size() + 1);
     order.setStatus("Active");
     addOrder(order);
+    return true;
 }
 
 void ManageOrder::viewAllOrders() {

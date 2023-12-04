@@ -8,7 +8,12 @@
  * Date Created: 12/1/2023 
 */
 
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <string>
 #include "Librarian.h"
+
 
 void ManageLibrarian::addLibrarian(const Librarian& librarian) {
     librarians.push_back(librarian);
