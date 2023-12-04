@@ -3,7 +3,7 @@
  *              date. Only when updateCurrentDate() is called will the date be updated to the current date.
  * 
  * 
- * Authors: Long Chau
+ * Authors: Long Chau, Mark Ulicnik
  * Date Created: 12/1/2023 
 */
 
@@ -13,10 +13,12 @@
 #include <string>
 #include <iostream>
 
+//Default constructor sets date to current date
 Date::Date() {
     updateCurrentDate();
 }
 
+//Can be used to set an arbitrary date
 Date::Date(int day, int month, int year) {
     this->day = day;
     this->month = month;
@@ -44,6 +46,7 @@ int Date::getDay() const {
     return day;
 }
 
+//Returns a string in the format YYYY-MM-DD
 std::string Date::getDateString() const {
     char buffer[11]; 
     strftime(buffer, sizeof(buffer), "%Y-%m-%d", &dateInfo);

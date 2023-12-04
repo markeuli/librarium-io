@@ -18,6 +18,6 @@ using namespace std;
 
 int main()
 {
-    Menu menu;
+    Menu menu; //entry point
     return 0;
 }

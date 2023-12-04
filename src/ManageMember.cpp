@@ -14,7 +14,7 @@
 #include <algorithm>
 #include "Member.h"
 
-
+using namespace std;
  
 void ManageMember::addMember(){
     Member memb;
@@ -50,15 +50,14 @@ void ManageMember::addMember(const Member& memb){
 }
 
 void ManageMember::removeMember(int memberID){
-    for (auto& member : members) {
-        if (member.getMemberID() == memberID) {
-            members.erase(remove_if(members.begin(), members.end(),
-                            [memberID](const Member& m) {
-                                return m.getMemberID() == memberID; 
-                            }),
-                            members.end());
-        }
-    }
+    
+    //erase-remove pattern used with vectors to remove a specific element
+    members.erase(remove_if(members.begin(), members.end(),
+                    [memberID](const Member& m) {
+                        return m.getMemberID() == memberID; 
+                    }),
+                    members.end());
+
 }
 
 void ManageMember::editMember(int id){

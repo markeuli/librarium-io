@@ -140,7 +140,7 @@ void Menu::showUserMenu() {
             case 4:
                 cout << "Enter book id: " << endl;
                 cin >> bookId;
-                if (manageOrder.returnBook(userId, bookId)){
+                if (manageOrder.returnBook(userId, bookId)){ //if the order was able to be found and returned, returnBook based on id
                     manageBook.returnBook(bookId);
                     cout << "Book successfully returned" << endl;
                 } else {
@@ -302,6 +302,7 @@ void Menu::showManageBooksMenu(){
                 break;
 
             case 5:
+                //return user to admin menu if admin, librarian menu if librarian
                 if (userType == "admin")
                     showAdminMenu();
                 else if (userType == "librarian")

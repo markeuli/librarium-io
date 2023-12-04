@@ -12,11 +12,13 @@
 #include <vector>
 #include <iostream>
 
+//add preconfigured book class to the vector
 void ManageBook::addBook(const Book &book)
 {
     books.push_back(book);
 }
 
+//small menu which allows user to enter book information
 void ManageBook::addBook()
 {
     Book b;
@@ -56,20 +58,21 @@ void ManageBook::addBook()
     books.push_back(b);
 }
 
-// Remove a book based on its ID
+
 void ManageBook::removeBook(int bookId)
 {
-    books.erase(
+    /* https://stackoverflow.com/questions/48997351/remove-object-from-vector-based-on-object-property
+        ^ common way to remove an object from a vector based on a property using remove_if and erase
+    */
+    books.erase( 
         remove_if(books.begin(), books.end(),
-                    [bookId](const Book &b)
+                    [bookId](const Book &b) 
                     {
                         return b.getBookId() == bookId;
                     }),
         books.end());
 }
 
-// TEAM: This is how we should edit any entity 
-// These are meant to be used in the Menu class
 void ManageBook::editBook(int bookID)
 {
     //get field to change
@@ -86,7 +89,8 @@ void ManageBook::editBook(int bookID)
     {
     case 1:
         std::cout << "Enter new title:\n";
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        //clear buffer, so getline does not mistake lefover "\n" as input (used everytime getline is used after cin)
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
         std::getline(std::cin, newInfo);
         for (auto &b : books)
         {
@@ -100,6 +104,7 @@ void ManageBook::editBook(int bookID)
 
     case 2:
         std::cout << "Enter new author:\n";
+        //clear buffer, so getline does not mistake lefover "\n" as input (used everytime getline is used after cin)
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::getline(std::cin, newInfo);
         for (auto &b : books)

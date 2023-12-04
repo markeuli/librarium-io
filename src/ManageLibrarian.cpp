@@ -15,6 +15,7 @@ void ManageLibrarian::addLibrarian(const Librarian& librarian) {
 }
 
 void ManageLibrarian::removeLibrarian(int employeeId) {
+    //erase-remove pattern used with vectors to remove a specific element
     librarians.erase(remove_if(librarians.begin(), librarians.end(),
                                     [employeeId](const Librarian& l) { return l.getEmployeeId() == employeeId; }),
     librarians.end());

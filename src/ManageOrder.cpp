@@ -32,7 +32,7 @@ void ManageOrder::removeOrder(int orderId)
         orders.end());
 }
 
-// Edit an existing order based on its ID
+// Edit an existing order based on another order
 void ManageOrder::editOrder(const Order &updatedOrder)
 {
     for (auto &o : orders)
