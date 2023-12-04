@@ -13,6 +13,21 @@ Menu::Menu() {
     user.setMembershipStatus("active");
     manageMember.addMember(user);
 
+    //create hardcoded book with bookId = 1
+    Book book;
+    book.setBookId(1);
+    book.setTitle("C++ For Dummies");
+    book.setAuthor("Bjarne Stroustrup");
+    book.setISBN("978-0-7645-7065-2");
+    book.setPublicationDate(2004);
+    book.setTotalCopies(1);
+    book.setCopiesAvailable(1);
+    book.setLanguage("English");
+    book.setCondition("Good");
+    book.setBookStatus("Available");
+    manageBook.addBook(book);
+
+
     cout << "Welcome to Librarium-IO:" << endl;
     cout << "a CLI library management system" << endl;
     cout << "Please login to continue" << endl;

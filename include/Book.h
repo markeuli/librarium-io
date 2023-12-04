@@ -61,6 +61,7 @@ class ManageBook
         std::vector<Book> books;
     public:
         void addBook();
+        void addBook(const Book &book);
         void removeBook(int bookId);
         void editBook(int bookID);
         const std::vector<Book> getBooks() const;

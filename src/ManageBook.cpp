@@ -10,6 +10,11 @@
     books = std::vector<Book>();
 }*/
 
+void ManageBook::addBook(const Book &book)
+{
+    books.push_back(book);
+}
+
 void ManageBook::addBook()
 {
     Book b;
