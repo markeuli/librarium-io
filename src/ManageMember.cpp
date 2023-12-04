@@ -15,11 +15,10 @@ void ManageMember::addMember(){
     std::string password;
     std::string membershipStatus;
 
-    cout << "Enter member ID:\n";
-    cin >> id; 
+    id = members.size() + 1; // increments, so that each member has a unique id
     memb.setMemberID(id);
     cout << "Enter member name:\n";
-    cin >> name;
+    getline(cin, name);
     memb.setName(name);
     cout << "Enter member email:\n";
     cin >> email;
@@ -30,7 +29,8 @@ void ManageMember::addMember(){
     cout << "Enter member membeship status:\n";
     cin >> membershipStatus;
     memb.setMembershipStatus(membershipStatus);
-                
+    
+    cout << "Member added successfully! New member id: "<< id << "\n";
     members.push_back(memb);
 }
 
@@ -68,7 +68,7 @@ void ManageMember::editMember(int id){
             {
             case 1:
                 cout << "Enter new name:\n";
-                cin >> newInfo;
+                getline(cin, newInfo);
                 member.setName(newInfo);
                 return;
                 break;

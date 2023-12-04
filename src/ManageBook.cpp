@@ -16,14 +16,14 @@ void ManageBook::addBook()
     std::string title, author, isbn, lang, cond, status;
     int tc, id;
     int d;
-    std::cout << "Enter book ID:\n";
-    std::cin >> id;
+    
+    id = books.size() + 1; //increments, so that each title has a unique id
     b.setBookId(id);
     std::cout << "Enter book title:\n";
-    std::cin >> title;
+    std::getline(std::cin, title);
     b.setTitle(title);
     std::cout << "Enter book author:\n";
-    std::cin >> author;
+    std::getline(std::cin, author);
     b.setAuthor(author);
     std::cout << "Enter book ISBN:\n";
     std::cin >> isbn;
@@ -77,7 +77,7 @@ void ManageBook::editBook(int bookID)
     {
     case 1:
         std::cout << "Enter new title:\n";
-        std::cin >> newInfo;
+        std::getline(std::cin, newInfo);
         for (auto &b : books)
         {
             if (b.getBookId() == bookID)
@@ -90,7 +90,7 @@ void ManageBook::editBook(int bookID)
 
     case 2:
         std::cout << "Enter new author:\n";
-        std::cin >> newInfo;
+        std::getline(std::cin, newInfo);
         for (auto &b : books)
         {
             if (b.getBookId() == bookID)

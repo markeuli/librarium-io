@@ -204,7 +204,8 @@ void Menu::showManageUsersMenu() {
         cout << "2. Search User" << endl;
         cout << "3. View All Users" << endl;
         cout << "4. Edit User" << endl;
-        cout << "5. Back" << endl;
+        cout << "5. Remove User" << endl;
+        cout << "6. Back" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
         int id;
@@ -227,6 +228,11 @@ void Menu::showManageUsersMenu() {
                 manageMember.editMember(id);
                 break;
             case 5:
+                cout << "Enter user id: " << endl;
+                cin >> id;
+                manageMember.removeMember(id);
+                break;
+            case 6:
                 showAdminMenu();
                 break;
             default:
