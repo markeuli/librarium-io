@@ -18,6 +18,7 @@ void ManageMember::addMember(){
     id = members.size() + 1; // increments, so that each member has a unique id
     memb.setMemberID(id);
     cout << "Enter member name:\n";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     getline(cin, name);
     memb.setName(name);
     cout << "Enter member email:\n";

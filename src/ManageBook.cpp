@@ -20,9 +20,11 @@ void ManageBook::addBook()
     id = books.size() + 1; //increments, so that each title has a unique id
     b.setBookId(id);
     std::cout << "Enter book title:\n";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::getline(std::cin, title);
     b.setTitle(title);
     std::cout << "Enter book author:\n";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::getline(std::cin, author);
     b.setAuthor(author);
     std::cout << "Enter book ISBN:\n";
@@ -77,6 +79,7 @@ void ManageBook::editBook(int bookID)
     {
     case 1:
         std::cout << "Enter new title:\n";
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::getline(std::cin, newInfo);
         for (auto &b : books)
         {
@@ -90,6 +93,7 @@ void ManageBook::editBook(int bookID)
 
     case 2:
         std::cout << "Enter new author:\n";
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::getline(std::cin, newInfo);
         for (auto &b : books)
         {
