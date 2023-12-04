@@ -21,6 +21,7 @@ Menu::Menu() {
 
 void Menu::showLoginMenu() {
     while (true) {
+        cout << endl;
         cout << "Login Menu" << endl;
         cout << "Please enter your credentials" << endl
             << "Using primitive authentication for now" << endl << endl;
@@ -29,6 +30,7 @@ void Menu::showLoginMenu() {
         cin >> username;
         cout << "Password(123 for all): ";
         cin >> password;
+        cout << endl;
         if (username == "admin" && password == "123") {
             userType = "admin";
             showAdminMenu();
@@ -47,6 +49,7 @@ void Menu::showLoginMenu() {
 
 void Menu::showAdminMenu() {
     while (true) {
+        cout << endl;
         int choice;
         cout << "Admin Menu: Manage Users" << endl;
         cout << "1. Users" << endl;
@@ -55,6 +58,7 @@ void Menu::showAdminMenu() {
         cout << "4. Exit (All Data Will Be Lost)" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
+        cout << endl;
         switch (choice) {
             case 1:
                 showManageUsersMenu();
@@ -78,6 +82,7 @@ void Menu::showAdminMenu() {
 
 void Menu::showUserMenu() {
     while (true) {
+        cout << endl;
         cout << "User Menu: View Books and my Orders" << endl;
         cout << "1. View Books" << endl;
         cout << "2. Order Book" << endl;
@@ -89,6 +94,7 @@ void Menu::showUserMenu() {
         cout << "Enter your choice: ";
         int choice;
         cin >> choice;
+        cout << endl;
         int bookId;
         switch (choice) {
             case 1:
@@ -109,7 +115,7 @@ void Menu::showUserMenu() {
                 manageOrder.viewOrdersByUser(userId);
                 break;
             case 4:
-                cout << "Enter book id: " << endl;;
+                cout << "Enter book id: " << endl;
                 cin >> bookId;
                 if (manageOrder.returnBook(userId, bookId)){
                     manageBook.returnBook(bookId);
@@ -133,11 +139,13 @@ void Menu::showUserMenu() {
                 cout << "Invalid choice" << endl;
                 break;
         } 
+        cout << endl;
     }
 }
 
 void Menu::showLibrarianMenu() {
     while (true) {
+        cout << endl;
         cout << "Librarian Menu: View Books and Orders" << endl;
         cout << "1. View Books" << endl;
         cout << "2. View Orders" << endl;
@@ -149,6 +157,7 @@ void Menu::showLibrarianMenu() {
         cout << "Enter your choice: ";
         int choice;
         cin >> choice;
+        cout << endl;
         switch (choice) {
             case 1:
                 manageBook.viewAllBooks();
@@ -181,12 +190,14 @@ void Menu::showLibrarianMenu() {
                 cout << "Invalid choice" << endl;
                 break;
         }
+        cout << endl;
     }
 }
 
 /**********************************MANAGE USERS***********DONE****************************/
 void Menu::showManageUsersMenu() {
     while (true) {
+        cout << endl;
         int choice;
         cout << "Manage Users Menu" << endl;
         cout << "1. Add User" << endl;
@@ -197,6 +208,7 @@ void Menu::showManageUsersMenu() {
         cout << "Enter your choice: ";
         cin >> choice;
         int id;
+        cout << endl;
         switch (choice) {
             case 1:
                 manageMember.addMember();
@@ -221,6 +233,7 @@ void Menu::showManageUsersMenu() {
                 cout << "Invalid choice" << endl;
                 break;
         }
+        cout << endl;
     }
 
 }
@@ -229,14 +242,17 @@ void Menu::showManageUsersMenu() {
 void Menu::showManageBooksMenu(){
     while (true) {
         int choice;
+        cout << endl;
         cout << "Manage Books Menu" << endl;
         cout << "1. Add Book" << endl;
         cout << "2. Search Book" << endl;
         cout << "3. View All Books" << endl;
-        cout << "4. Back" << endl;
+        cout << "4. Remove Book" << endl;
+        cout << "5. Back" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
         int id;
+        cout << endl;
         switch (choice) {
             case 1:
                 manageBook.addBook();
@@ -249,7 +265,14 @@ void Menu::showManageBooksMenu(){
             case 3:
                 manageBook.viewAllBooks();
                 break;
+
             case 4:
+                cout << "Enter book id: " << endl;
+                cin >> id;
+                manageBook.removeBook(id);
+                break;
+
+            case 5:
                 if (userType == "admin")
                     showAdminMenu();
                 else if (userType == "librarian")
@@ -259,6 +282,7 @@ void Menu::showManageBooksMenu(){
                 cout << "Invalid choice" << endl;
                 break;
         }
+        cout << endl;
     }
 }
 

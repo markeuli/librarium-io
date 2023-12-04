@@ -28,12 +28,13 @@ void ManageBook::addBook()
     std::cout << "Enter book ISBN:\n";
     std::cin >> isbn;
     b.setISBN(isbn);
-    std::cout << "Enter book publication date:\n";
+    std::cout << "Enter book publication date (Year):\n";
     std::cin >> d;
     b.setPublicationDate(d);
     std::cout << "Enter book total copies:\n";
     std::cin >> tc;
     b.setTotalCopies(tc);
+    b.setCopiesAvailable(tc);
     std::cout << "Enter book language:\n";
     std::cin >> lang;
     b.setLanguage(lang);
