@@ -1,3 +1,12 @@
+/* Librarian.h
+ * Description: This header declares the Librarian and ManageLibrarian classes. The ManageLibrarian class will
+ *              be used to create objects of the Librarian class and to manage the librarians in the library.
+ * 
+ * 
+ * Authors: Sadaf Khan
+ * Date Created: 12/1/2023 
+*/
+
 #ifndef LIBRARIAN_H
 #define LIBRARIAN_H
 #include <string>

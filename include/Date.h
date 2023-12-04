@@ -1,3 +1,12 @@
+/* Date.h
+ * Description: This header declares a Date class the essentially serves as a struct
+ *              to hold the current date. It also has a method to update the current date using ctime.
+ * 
+ * 
+ * Authors: Mark Ulicnik, Long Chau
+ * Date Created: 12/1/2023 
+*/
+
 #ifndef DATE_H
 #define DATE_H
 

@@ -1,3 +1,12 @@
+/* Book.cpp
+ * Description: Book class implementation. Holds data pertaining to a specific book. One book is hardcoded for ease
+ *              of testing and demonstration as there is no persistent database. 
+ * 
+ * 
+ * Authors: Duy Dinh, Mark Ulicnik
+ * Date Created: 12/1/2023 
+*/
+
 #include "Book.h"
 
 Book::Book() {

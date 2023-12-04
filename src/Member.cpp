@@ -1,3 +1,12 @@
+/* Member.cpp
+ * Description: Member class is an entity class that holds information about a member, including their name, email, 
+ *              password, and membership status. ManageMember class is made to manage these. A copy constructor is
+ *             also implemented to initialize new members.
+ * 
+ * Authors: Lourdes Lola Renteria, Mark Ulicnik, Sadaf Khan
+ * Date Created: 12/1/2023 
+*/
+
 #include <string>
 #include <vector>
 #include "Book.h"

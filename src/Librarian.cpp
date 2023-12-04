@@ -1,3 +1,12 @@
+/* Librarian.cpp
+ * Description: This is the implementation for the librarian class. Holds data pertaining to a specific librarian.
+ *
+ * 
+ * 
+ * Authors: Sadaf Khan
+ * Date Created: 12/1/2023 
+*/
+
 #include "Librarian.h"
 
 Librarian::Librarian(std::string name, int employeeId, std::string email, std::string password, std::string shiftScheduled)
@@ -42,17 +51,3 @@ void Librarian::setPassword(const std::string& p) {
 void Librarian::setShiftScheduled(const std::string& s) {
     shiftScheduled = s;
 }
-
-/*int main() {
-    // Example usage
-    Librarian librarian("John Doe", 123, "johndoe@example.com", "password123", "2023-11-28");
-
-    std::cout << "Librarian Name: " << librarian.getName() << std::endl;
-    std::cout << "Employee ID: " << librarian.getEmployeeId() << std::endl;
-
-    // Update Librarian's email
-    librarian.setEmail("newemail@example.com");
-    std::cout << "Updated Email: " << librarian.getEmail() << std::endl;
-
-    return 0;
-}*/

@@ -1,9 +1,17 @@
+/* Order.h
+ * Description: Header for the Order and ManageOrder classes. Contains class and member function declarations.
+ *              The ManageOrder class is used to create objects of the Order class and to manage 
+ *              the orders in the library.
+ * 
+ * Authors: Mark Ulicnik, Long Chau
+ * Date Created: 12/2/2023 
+*/
+
 #ifndef ORDER_H
 #define ORDER_H
 
 #include <vector>
 #include <string>
-#include "Book.h"
 #include "Date.h"
 
 using namespace std;

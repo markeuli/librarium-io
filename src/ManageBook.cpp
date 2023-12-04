@@ -1,14 +1,16 @@
+/* ManageBook.cpp
+ * Description: ManageBook is used to hold all of the books in place of a formal database. It also has functions
+ *              to add, remove, edit, check out and return books. The checkout and return books functions are called
+ *             alongside similar functions in the ManageOrder class when these actions are performed.
+ * 
+ * Authors: Mark Ulicnik, Duy Dinh
+ * Date Created: 12/1/2023 
+*/
+
 #include "Book.h"
 #include <algorithm>
 #include <vector>
 #include <iostream>
-
-//commented in case we want to add hardcoded books for demo
-/*ManageBook::ManageBook()
-{
-    //if we had a db: books = readBooksFromFile();
-    books = std::vector<Book>();
-}*/
 
 void ManageBook::addBook(const Book &book)
 {

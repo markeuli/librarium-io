@@ -1,3 +1,11 @@
+/* Menu.cpp
+ * Description: This is the implementation for the Menu class. It contains the definitions for the Menu class.
+ *              The Menu class uses the ManageLibrarian, ManageMember, ManageBook, and ManageOrder classes to create
+ *              objects of those classes.The menue class starts by displaying a login menu, then takes user to either 
+ *              the admin, librarian, or user menu depending on the user type.
+ * Authors: Mark Ulicnik
+ * Date Created: 12/1/2023 
+*/
 #include "Menu.h"
 #include <iostream>
 

@@ -1,3 +1,12 @@
+/* Date.cpp
+ * Description: Date class implementation. Uses ctime to get the current date. Can also be used to hold an arbitrary
+ *              date. Only when updateCurrentDate() is called will the date be updated to the current date.
+ * 
+ * 
+ * Authors: Long Chau
+ * Date Created: 12/1/2023 
+*/
+
 #include "Date.h"
 #include <chrono>
 #include <ctime>

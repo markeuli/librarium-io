@@ -1,5 +1,13 @@
-#include "Order.h"
+/* Order.cpp
+ * Description: Order class implementation. Holds data pertaining to a specific order.
+ *
+ * 
+ * 
+ * Authors: Long Chau
+ * Date Created: 12/1/2023 
+*/
 
+#include "Order.h"
 
 int Order::getUserId() const {
     return userId;
@@ -13,9 +21,6 @@ Date Order::getDueDate() const {
     return dueDate;
 }
 
-
-
-// Setter methods
 void Order::setOrderId(int id) {
     orderId = id;
 }

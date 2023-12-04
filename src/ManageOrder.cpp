@@ -1,3 +1,12 @@
+/* ManageOrder.cpp
+ * Description: ManageOrder is used to hold and manipulate orders. It has functions to add, remove, edit, and 
+ *              view one or multiple orders. It also has functions to order and return books, which are called
+ *              to create orders for member actions.
+ * 
+ * Authors: Long Chau
+ * Date Created: 12/1/2023 
+*/
+
 #include <vector>
 #include <algorithm>
 #include <iostream>

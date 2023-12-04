@@ -1,3 +1,12 @@
+/* ManageMember.cpp
+ * Description: ManageMember is used to hold and manipulate members. It has functions to add, remove, edit, and
+ *              view one or multiple members. It currently has a preconfigured member to test the system.
+ *              Notably, the id numbers are generated from the member size, so that each member has a unique id.
+ * 
+ * Authors: Lourdes Lola Rentaria, Mark Ulicnik, Sadaf Khan
+ * Date Created: 12/1/2023 
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>

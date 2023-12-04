@@ -1,3 +1,12 @@
+/* Menu.h
+ * Description: This is the header for the Menu class. It contains the declarations for the Menu class 
+ *          and its methods. Menu class imports the Date, Member, Book, Librarian, and Order classes, 
+ *          and uses them to create objects of those classes. The Menu class also uses the ManageLibrarian,
+ *          ManageMember, ManageBook, and ManageOrder classes to create objects of those classes.
+ * Authors: Mark Ulicnik, Sadaf Khan
+ * Date Created: 12/2/2023 
+*/
+
 #include <string>
 #include <vector>
 #include <iostream>

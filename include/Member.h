@@ -1,3 +1,12 @@
+/* Member.h
+ * Description: This is the header for the Member class. Contains the declarations for the Member class and the
+ *              ManageMember class. The ManageMember class is used to create objects of the Member class and to
+ *              manage the members in the library.
+ * 
+ * Authors: Mark Ulicnik, Lourdes Lola Renteria, Sadaf Khan
+ * Date Created: 12/1/2023 
+*/
+
 #ifndef MEMBER_H
 #define MEMBER_H
 

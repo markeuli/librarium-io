@@ -1,3 +1,12 @@
+/* Book.h
+ * Description: This header is for the Book and ManageBook classes. It contains the declarations 
+ *              for the Book and ManageBook classes and their member functions. The ManageBook class
+ *             is used to create objects of the Book class and to manage the books in the library.
+ * 
+ * Authors: Mark Ulicnik, Duy Dinh
+ * Date Created: 12/1/2023 
+*/
+
 #ifndef BOOK_H
 #define BOOK_H
 
