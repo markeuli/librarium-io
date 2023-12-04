@@ -19,7 +19,7 @@ void ManageMember::addMember(){
     cin >> id; 
     memb.setMemberID(id);
     cout << "Enter member name:\n";
-    getline(cin, name);
+    cin >> name;
     memb.setName(name);
     cout << "Enter member email:\n";
     cin >> email;

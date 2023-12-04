@@ -267,43 +267,4 @@ void Menu::showManageBooksMenu(){
         }
     }
 }
-/* This is going to be the edit member for the Admin, ask for member id, edit or remove, ask for new info, call ManageMember::editMember(id, option, newInfo)
-for (auto& memb : members) {
-        if (member.getMemberID() == id) {
-            member = memb;
-        }
-int choice;
-            std::cout << "What would you like to edit?\n";
-            std::cout << "1. Name\n";
-            std::cout << "2. Email\n";
-            std::cout << "3. Password\n";
-            std::cout << "4. Membership Status\n";
-            std::cin >> choice;
-            std::string name, email, password, membershipStatus;
-            switch (choice) {
-                case 1:
-                    std::cout << "Enter new name:\n";
-                    std::cin >> name;
-                    member.setName(name);
-                    break;
-                case 2:
-                    std::cout << "Enter new email:\n";
-                    std::cin >> email;
-                    member.setEmail(email);
-                    break;
-                case 3:
-                    std::cout << "Enter new password:\n";
-                    std::cin >> password;
-                    member.setPassword(password);
-                    break;
-                case 4:
-                    std::cout << "Enter new membership status:\n";
-                    std::cin >> membershipStatus;
-                    member.setMembershipStatus(membershipStatus);
-                    break;
-                default:
-                    std::cout << "Invalid choice\n";
-                    break;
-            }
-*/
 
