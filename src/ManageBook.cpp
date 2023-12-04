@@ -33,7 +33,7 @@ void ManageBook::addBook()
     std::getline(std::cin, title);
     b.setTitle(title);
     std::cout << "Enter book author:\n";
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::getline(std::cin, author);
     b.setAuthor(author);
     std::cout << "Enter book ISBN:\n";
